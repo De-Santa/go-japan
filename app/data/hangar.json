@@ -1,0 +1,66 @@
+[
+{
+"jets": [
+  {
+  "id": 49,
+  "name": "VQ-BBQ",
+  "servicedBy": 2
+  },
+  {
+  "id": 890,
+  "name": "VQ-PTH"
+  },
+  {
+  "id": 42,
+  "name": "SSJ-420",
+  "servicedBy": 3
+  },
+  {
+    "id": 290,
+    "name": "BOENING",
+    "servicedBy": 4
+  },
+  {
+    "id": 422,
+    "name": "MIG-25",
+    "servicedBy": 5
+  },
+  {
+    "id": 482,
+    "name": "YAK-45",
+    "servicedBy": 4
+  },
+  {
+    "id": 432,
+    "name": "Concord",
+    "servicedBy": 6
+  },
+  {
+  "id": 91,
+  "name": "TIE-1089"
+  }
+],
+"techs": [
+  {
+  "id": 1,
+  "name": "John Doe"
+  },
+  {
+  "id": 2,
+  "name": "Yolo Swag"
+  },
+  {
+  "id": 3,
+  "name": "Quantum Cossack"
+  },
+  {
+  "id": 4,
+  "name": "Topaloff"
+  },
+  {
+  "id": 5,
+  "name": "Rodrigo Perez"
+  }
+]
+}
+]

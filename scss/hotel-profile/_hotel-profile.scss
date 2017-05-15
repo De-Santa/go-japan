@@ -1,0 +1,98 @@
+.hotel-profile {
+	position: relative;
+	overflow: hidden;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: transparentize($color-neutral,0.3);
+	background-size: cover;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: inherit;
+		background-color: transparentize($color-main-dark,0.3);
+		transform: translateY(-210px);
+		transition: transform .5s ease-out;
+	}
+	&:hover::before {
+		transform: translateY(0);
+	}
+	&__no-preview {
+		display: none;
+		position: absolute;
+		top: 65%;
+		left: 50%;
+		transform: translate(-50%,-65%);
+		text-align: center;
+		color: $color-main-dark;
+		font-size: 16px;
+	  	font-weight: bold;
+		svg {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 15px;
+			width: 80px;
+			height: 60px;
+			fill: transparentize($color-main-dark,0.4);
+		}
+	}
+	&__info {
+	  position: relative;
+		&-stars, &-name, &-distance, &-rating, &-choose {
+			position: absolute;
+			left: 0;
+		}
+		&-stars {
+		  svg {
+			width: 12px;
+			height: 12px;
+			margin-right: 2px;
+		  }
+		}
+		&-name {
+			top: 20px;
+			max-width: 280px;
+			overflow: hidden;
+			font-weight: bold;
+			color: $color-text-white;
+			font-size: 18px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		&-distance {
+			top: 44px;
+			color: darken($color-text-white, 10%);
+			font-size: 13px;
+		}
+		&-rating {
+			left: 295px;
+			top: 5px;
+			width: 50px;
+			height: 50px;
+			border: 5px solid $color-neutral;
+			color: $color-text-white;
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 40px;
+			svg {
+			  height: 40px;
+			  width: 26px;
+			  fill: lighten($color-main-dark, 65%);
+			}
+
+		}
+		&-rating--low {
+			border-color: $color-rating-low;
+		}
+		&-rating--neutral {
+			border-color: $color-rating-neutral;
+		}
+		&-rating--high {
+			border-color: $color-rating-high;
+		}
+	}
+}

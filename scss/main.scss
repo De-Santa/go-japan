@@ -1,0 +1,22 @@
+@import 'reset';
+@import 'vars';
+@import 'container/container';
+
+@import 'go-japan/go-japan';
+@import 'header/header';
+@import 'hotel-profile/hotel-profile';
+
+//BOX-SIZING SETTINGS
+html {
+	box-sizing: border-box;
+	font-family: Helvetica;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+//TEMPLATE IE FALLBACK
+template {
+	display: none;
+}

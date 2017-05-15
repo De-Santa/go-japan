@@ -1,0 +1,211 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.container {
+  position: relative;
+  width: 1600px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (max-width: 1599px) {
+    .container {
+      width: 1280px; } }
+  @media screen and (max-width: 1279px) {
+    .container {
+      width: 1024px; } }
+  @media screen and (max-width: 1023px) {
+    .container {
+      width: 768px; } }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 360px; } }
+  @media screen and (max-width: 359px) {
+    .container {
+      width: 100%; } }
+
+.go-japan {
+  height: 2000px;
+  background-color: #7999c2;
+  background-image: url("/../img/main-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain; }
+  .go-japan__header {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .go-japan__hotels-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-top: 500px;
+    padding-top: 30px; }
+    .go-japan__hotels-list-item {
+      -webkit-flex-basis: -webkit-calc(25% - 30px);
+          -ms-flex-preferred-size: calc(25% - 30px);
+              flex-basis: calc(25% - 30px);
+      height: 280px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-bottom: 30px; }
+  @media screen and (max-width: 1599px) {
+    .go-japan__hotels-list-item {
+      -webkit-flex-basis: -webkit-calc(33.333% - 30px);
+          -ms-flex-preferred-size: calc(33.333% - 30px);
+              flex-basis: calc(33.333% - 30px); } }
+  @media screen and (max-width: 1023px) {
+    .go-japan__hotels-list-item {
+      -webkit-flex-basis: -webkit-calc(50% - 30px);
+          -ms-flex-preferred-size: calc(50% - 30px);
+              flex-basis: calc(50% - 30px); } }
+  @media screen and (max-width: 768px) {
+    .go-japan__hotels-list-item {
+      -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+              flex-basis: 100%; } }
+
+.main-header {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(199, 0, 37, 0.8); }
+
+.hotel-profile {
+  position: relative;
+  overflow: hidden;
+  padding: 5px 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background-color: rgba(164, 169, 199, 0.7);
+  background-size: cover; }
+  .hotel-profile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-color: rgba(51, 51, 51, 0.7);
+    -webkit-transform: translateY(-210px);
+        -ms-transform: translateY(-210px);
+            transform: translateY(-210px);
+    -webkit-transition: -webkit-transform .5s ease-out;
+    transition: -webkit-transform .5s ease-out;
+    transition: transform .5s ease-out;
+    transition: transform .5s ease-out, -webkit-transform .5s ease-out; }
+  .hotel-profile:hover::before {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0); }
+  .hotel-profile__no-preview {
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -65%);
+        -ms-transform: translate(-50%, -65%);
+            transform: translate(-50%, -65%);
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold; }
+    .hotel-profile__no-preview svg {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+      width: 80px;
+      height: 60px;
+      fill: rgba(51, 51, 51, 0.6); }
+  .hotel-profile__info {
+    position: relative; }
+    .hotel-profile__info-stars, .hotel-profile__info-name, .hotel-profile__info-distance, .hotel-profile__info-rating, .hotel-profile__info-choose {
+      position: absolute;
+      left: 0; }
+    .hotel-profile__info-stars svg {
+      width: 12px;
+      height: 12px;
+      margin-right: 2px; }
+    .hotel-profile__info-name {
+      top: 20px;
+      max-width: 280px;
+      overflow: hidden;
+      font-weight: bold;
+      color: #f7f7f7;
+      font-size: 18px;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .hotel-profile__info-distance {
+      top: 44px;
+      color: #dedede;
+      font-size: 13px; }
+    .hotel-profile__info-rating {
+      left: 295px;
+      top: 5px;
+      width: 50px;
+      height: 50px;
+      border: 5px solid #a4a9c7;
+      color: #f7f7f7;
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 40px; }
+      .hotel-profile__info-rating svg {
+        height: 40px;
+        width: 26px;
+        fill: #d9d9d9; }
+    .hotel-profile__info-rating--low {
+      border-color: #d44b4b; }
+    .hotel-profile__info-rating--neutral {
+      border-color: #dc784e; }
+    .hotel-profile__info-rating--high {
+      border-color: #62ce6c; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Helvetica; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+template {
+  display: none; }
