@@ -1,41 +1,128 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title></title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="css/main.css">
-</head>
-<body class="go-japan">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
 
-<header class="go-japan__header main-header">
-	<h1 style="text-align: center; text-transform: uppercase; line-height: 40px; color: #fff;">reserved for header</h1>
-</header>
+	<body class="go-japan">
 
-	<ul class="go-japan__hotels-list container">
-		<template id="hotel-profile-template">
-			<li class="go-japan__hotels-list-item hotel-profile">
-				<div class="hotel-profile__no-preview">
-					<svg><use xlink:href="#no-photo"></use></svg>
-					Нет фотографии
-				</div>
-				<div class="hotel-profile__info">
-					<div class="hotel-profile__info-stars"></div>
-					<div class="hotel-profile__info-name"></div>
-					<div class="hotel-profile__info-distance"></div>
-					<div class="hotel-profile__info-rating"></div>
-					<div class="hotel-profile__info-choose"></div>
-					<div class="hotel-profile__extra">
-						<div class="hotel-profile__extra-feature"></div>
+		<header class="go-japan__header main-header">
+			<h1 style="text-align: center; text-transform: uppercase; line-height: 40px; color: #fff;">GO JAPAN APP</h1>
+		</header>
+
+		<div class="go-japan__filter filter container">
+			<div class="filter__button">Фильтр по отелям<svg><use xlink:href="#arrow-down"></use></svg></div>
+			<div class="filter__layout hidden">
+
+				<template id="range-slider-template">
+					<div class="filter__layout-item drag-slider">
+						<div class="drag-slider__title"></div>
+						<div class="drag-slider__value"></div>
+						<div class="drag-slider__scale">
+							<div class="drag-slider__scale-mask">
+								<div class="drag-slider__scale-mask-bg"></div>
+							</div>
+							<div class="drag-slider__scale-pointer" data-filter="stars"></div>
+						</div>
 					</div>
-					<div class="hotel-profile__price"></div>
+				</template>
+
+				<div class="filter__layout-item drag-slider">
+					<div class="drag-slider__title">Количество звезд от</div>
+					<div class="drag-slider__value">показать всё</div>
+					<div class="drag-slider__scale">
+						<div class="drag-slider__scale-mask">
+							<div class="drag-slider__scale-mask-bg"></div>
+						</div>
+						<div class="drag-slider__scale-pointer" data-filter="stars">
+							<svg class="drag-slider__scale-pointer-icon drag-slider__scale-pointer-icon--stars"><use xlink:href="#stars"></use></svg>
+						</div>
+					</div>
 				</div>
-			</li>
-		</template>
-	</ul>
-<script src="js/modules/svg-sprite.js"></script>
-<script src="js/modules/hotelList.js"></script>
-<script src="js/main.js"></script>
-</body>
+				<div class="filter__layout-item drag-slider">
+					<div class="drag-slider__title">Рейтинг от</div>
+					<div class="drag-slider__value">показать всё</div>
+					<div class="drag-slider__scale">
+						<div class="drag-slider__scale-mask">
+							<div class="drag-slider__scale-mask-bg"></div>
+						</div>
+						<div class="drag-slider__scale-pointer" data-filter="rating">
+							<svg class="drag-slider__scale-pointer-icon drag-slider__scale-pointer-icon--rating"><use xlink:href="#rate-icon"></use></svg>
+						</div>
+					</div>
+				</div>
+				<div class="filter__layout-item drag-slider">
+					<div class="drag-slider__title">Цена до</div>
+					<div class="drag-slider__value">показать всё</div>
+					<div class="drag-slider__scale">
+						<div class="drag-slider__scale-mask">
+							<div class="drag-slider__scale-mask-bg"></div>
+						</div>
+						<div class="drag-slider__scale-pointer" data-filter="price">
+							<svg class="drag-slider__scale-pointer-icon drag-slider__scale-pointer-icon--price"><use xlink:href="#ruble"></use></svg>
+						</div>
+					</div>
+				</div>
+				<div class="filter__layout-apply-btn">Применить фильтр</div>
+				<div class="filter__layout-item drag-slider">
+					<div class="drag-slider__title">Расстояние до центра км.</div>
+					<div class="drag-slider__value">показать всё</div>
+					<div class="drag-slider__scale">
+						<div class="drag-slider__scale-mask">
+							<div class="drag-slider__scale-mask-bg"></div>
+						</div>
+						<div class="drag-slider__scale-pointer" data-filter="distance">
+							<svg class="drag-slider__scale-pointer-icon drag-slider__scale-pointer-icon--distance"><use xlink:href="#distance"></use></svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<ul class="go-japan__hotels-list">
+				<li class="go-japan__hotels-list-grid-sizer"></li>
+				<li class="go-japan__hotels-list-gutter-sizer"></li>
+
+				<template id="hotel-template">
+					<li class="go-japan__hotels-list-item hotel">
+						<div class="hotel__preview"></div>
+						<svg class="hotel__no-preview"><use xlink:href="#no-photo"></use></svg>
+						<div class="hotel__header">
+							<div class="hotel__stars"></div>
+							<div class="hotel__name"></div>
+							<div class="hotel__distance"></div>
+						</div>
+						<div class="hotel__rating"></div>
+						<div class="hotel__choose"></div>
+						<div class="hotel__extra">
+							<div class="hotel__extra-feature"></div>
+						</div>
+						<div class="hotel__price"></div>
+					</li>
+				</template>
+
+			</ul>
+		</div>
+
+		<footer class="go-japan__footer main-footer">
+			<h2 class="main-footer__title">GO JAPAN</h2>
+			<p class="main-footer__subtitle">поиск отелей в Токио</p>
+		</footer>
+
+		<script src="js/libs/require.js" data-main="js/main"></script>
+		<script src="js/libs/jquery-3.2.1.min.js"></script>
+		<script src="js/libs/jquery-ui.min.js"></script>
+		<script src="js/libs/packery.min.js"></script>
+		<script src="js/helpers/svg-sprite.js"></script>
+		<script src="js/dataSource.js"></script>
+		<!--<script src="js/filter.js"></script>-->
+		<script src="js/hotel.js"></script>
+		<script src="js/hotelsList.js"></script>
+		<script src="js/main.js"></script>
+	</body>
 </html>

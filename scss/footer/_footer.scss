@@ -1,0 +1,19 @@
+.main-footer {
+	height: 200px;
+	width: 100%;
+	background-color: transparentize($color-japan-red, .3);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__title {
+		margin-bottom: 10px;
+		font-weight: bold;
+		font-size: 25px;
+		color: $color-text-white;
+	}
+	&__subtitle {
+		font-size: 18px;
+		color: $color-text-white;
+	}
+}

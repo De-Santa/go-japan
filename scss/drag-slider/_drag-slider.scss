@@ -1,0 +1,73 @@
+.drag-slider {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	&__title {
+		margin-bottom: 30px;
+		font-size: 18px;
+		color: darken($color-text-white,30);
+	}
+	&__value {
+	  margin-bottom: 30px;
+	  text-transform: uppercase;
+	  font-size: 20px;
+	  color: #fff;
+	}
+	&__scale {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 5px;
+		background-color: $color-neutral;
+		width: 320px;
+		height: 10px;
+		&-pointer.active {
+			background-color: $color-japan-red;
+			.drag-slider__scale-pointer-icon--stars {
+				fill: $color-stars-gold
+			}
+			.drag-slider__scale-pointer-icon--rating {
+				fill: $color-text-white
+			}
+			.drag-slider__scale-pointer-icon--price {
+				fill: $color-text-white
+			}
+			.drag-slider__scale-pointer-icon--distance {
+				fill: $color-text-white
+			}
+		}
+		&-pointer {
+			position: relative;
+			top: -12px;
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			background-color: darken($color-japan-red, 20);
+			transition: background-color .3s ease-in-out;
+			&-icon {
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -7.5px;
+				margin-left: -7.5px;
+				width: 15px;
+				height: 15px;
+				fill: $color-neutral;
+			}
+		}
+		&-mask {
+			position: absolute;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			height: 10px;
+			width: 30px;
+			&-bg {
+				border-radius: 5px;
+				background-color: $color-rating-high;
+				width: 320px;
+				height: 10px;
+			}
+		}
+	}
+}

@@ -1,50 +1,90 @@
 .go-japan {
-  height: 2000px;
+	position: relative;
+	padding-top: 40px;
 	background-color: $color-main-bg;
 	background-image: url('/../img/main-bg.jpg');
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: 100% auto;
+	background-position: top center;
 	&__header {
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
+	&__filter {
+		margin-bottom: 30px;
+	}
 
 	&__hotels-list {
-		display: flex;
-		flex-wrap: wrap;
-		margin-top: 500px;
-		padding-top: 30px;
-		&-item {
-			flex-basis: calc(25% - 30px);
-			height: 280px;
-			margin-left: 15px;
-			margin-right: 15px;
-			margin-bottom: 30px;
+		position: relative;
+		margin-bottom: 60px;
+		//background-color: rgba(red, 0.4);
+		&-grid-sizer, &-item {
+			width: 18%;
+			height: 250px;
+		}
+		&-item--active {
+			width: 38.5%;
+			height: 540px;
+		}
+		&-gutter-sizer {
+			width: 2.5%;
 		}
 	}
+
 	@media screen and (max-width: 1599px) {
 		&__hotels-list {
-			&-item {
-				flex-basis: calc(33.333% - 30px);
+			&-grid-sizer, &-item {
+				width: 23%;
+			}
+			&-item--active {
+				width: 48.6%;
+				height: 534px;
+			}
+			&-gutter-sizer {
+				width: 2.666%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1279px) {
+		&__hotels-list {
+			&-grid-sizer, &-item {
+				width: 32%;
+			}
+			&-item--active {
+				width: 66%;
+				height: 520px;
+			}
+			&-gutter-sizer {
+				width: 2%;
 			}
 		}
 	}
 
 	@media screen and (max-width: 1023px) {
 		&__hotels-list {
-			&-item {
-				flex-basis: calc(50% - 30px);
-			}
+		  &-grid-sizer, &-item {
+			width: 49%;
+		  }
+		  &-item--active {
+			width: 100%;
+		  }
+		  &-gutter-sizer {
+			width: 2%;
+		  }
 		}
 	}
 
-	@media screen and (max-width: 768px) {
-		&__hotels-list {
-			&-item {
-				flex-basis: 100%;
-			}
+	@media screen and (max-width: 567px) {
+	  &__hotels-list {
+		&-grid-sizer, &-item {
+			width: 100%;
 		}
+		&-gutter-sizer {
+			width: 5%;
+		}
+	  }
 	}
 
 }

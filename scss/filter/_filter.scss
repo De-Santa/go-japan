@@ -1,0 +1,119 @@
+.filter {
+	position: relative;
+	min-height: 330px;
+	//background-color: rgba(red,0.5);
+	text-align: center;
+	&__button.active {
+		animation: filter-btn-active .3s ease-in-out both;
+		&:hover > svg {
+			transform: rotate(180deg);
+		}
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+	&__button.inactive {
+		animation: filter-btn-inactive .3s ease-in-out both;
+	  svg {
+		transform: rotate(0deg);
+	  }
+	}
+	&__button {
+		z-index: 1;
+		position: relative;
+		max-height: 80px;
+		transform: translateY(155px);
+		width: 50%;
+		padding-top: 15px;
+		padding-bottom: 60px;
+		margin: 0 auto;
+		background-color: transparentize($color-japan-red,.25);
+		color: #fff;
+		font-size: 20px;
+		cursor: pointer;
+		transition: background-color .3s ease-in-out;
+		&:hover {
+			background-color: transparentize($color-japan-red,.15);
+		}
+		&:hover > svg {
+			transform: scale(1.2);
+		}
+		svg {
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			bottom: 10px;
+			left: 50%;
+			fill: $color-neutral;
+			margin-left: -12.5px;
+			transition: transform .3s ease-in-out;
+		}
+	}
+	&__layout.active {
+		animation: filter-layout-active .3s ease-in-out both;
+	}
+	&__layout.inactive {
+		animation: filter-layout-inactive .3s ease-in-out both;
+	}
+	&__layout {
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		flex-wrap: wrap;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		&-apply-btn {
+			position: absolute;
+		  padding: 15px 0;
+			width: 300px;
+			bottom: 15px;
+		  left: 50%;
+		  margin-left: -150px;
+			background-color: $color-neutral;
+		  cursor: pointer;
+		}
+		&-item {
+			padding-left: 15px;
+			padding-right: 15px;
+			width: 25%;
+			height: 250px;
+			background-color: transparentize($color-main-dark,0.1);
+			&:nth-child(2) {
+				//background-color: rgba(orange,0.7);
+			}
+			&:nth-child(3) {
+				//background-color: rgba(maroon,0.7);
+			}
+			&:nth-child(4) {
+				//background-color: rgba(gray,0.7);
+			}
+		}
+	}
+	@media screen and (max-width: 1599px) {
+		&__layout {
+			&-item {
+				width: 33.333%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 1279px) {
+		&__layout {
+			&-item {
+				width: 50%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		&__layout {
+			&-item {
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 359px) {
+
+	}
+}

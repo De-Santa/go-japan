@@ -35,6 +35,176 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@-webkit-keyframes filter-btn-inactive {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%; }
+  65% {
+    -webkit-transform: translateY(175px);
+            transform: translateY(175px);
+    width: 50%; }
+  100% {
+    -webkit-transform: translateY(155px);
+            transform: translateY(155px);
+    width: 50%; } }
+
+@keyframes filter-btn-inactive {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%; }
+  65% {
+    -webkit-transform: translateY(175px);
+            transform: translateY(175px);
+    width: 50%; }
+  100% {
+    -webkit-transform: translateY(155px);
+            transform: translateY(155px);
+    width: 50%; } }
+
+@-webkit-keyframes filter-btn-active {
+  0% {
+    -webkit-transform: translateY(155px);
+            transform: translateY(155px);
+    width: 50%; }
+  65% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    width: 100%; }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%; } }
+
+@keyframes filter-btn-active {
+  0% {
+    -webkit-transform: translateY(155px);
+            transform: translateY(155px);
+    width: 50%; }
+  65% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    width: 100%; }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%; } }
+
+@-webkit-keyframes filter-layout-active {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); }
+  65% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes filter-layout-active {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); }
+  65% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes filter-layout-inactive {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); } }
+
+@keyframes filter-layout-inactive {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-80px);
+            transform: translateY(-80px); } }
+
+@-webkit-keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes bounceInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px); }
+  80% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px); }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px); }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
 .container {
   position: relative;
   width: 1600px;
@@ -51,24 +221,138 @@ table {
   @media screen and (max-width: 1023px) {
     .container {
       width: 768px; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .container {
-      width: 360px; } }
-  @media screen and (max-width: 359px) {
+      width: 568px; } }
+  @media screen and (max-width: 567px) {
     .container {
       width: 100%; } }
 
 .go-japan {
-  height: 2000px;
+  position: relative;
+  padding-top: 40px;
   background-color: #7999c2;
   background-image: url("/../img/main-bg.jpg");
   background-repeat: no-repeat;
-  background-size: contain; }
+  background-size: 100% auto;
+  background-position: top center; }
   .go-japan__header {
     position: absolute;
     top: 0;
     left: 0; }
+  .go-japan__filter {
+    margin-bottom: 30px; }
   .go-japan__hotels-list {
+    position: relative;
+    margin-bottom: 60px; }
+    .go-japan__hotels-list-grid-sizer, .go-japan__hotels-list-item {
+      width: 18%;
+      height: 250px; }
+    .go-japan__hotels-list-item--active {
+      width: 38.5%;
+      height: 540px; }
+    .go-japan__hotels-list-gutter-sizer {
+      width: 2.5%; }
+  @media screen and (max-width: 1599px) {
+    .go-japan__hotels-list-grid-sizer, .go-japan__hotels-list-item {
+      width: 23%; }
+    .go-japan__hotels-list-item--active {
+      width: 48.6%;
+      height: 534px; }
+    .go-japan__hotels-list-gutter-sizer {
+      width: 2.666%; } }
+  @media screen and (max-width: 1279px) {
+    .go-japan__hotels-list-grid-sizer, .go-japan__hotels-list-item {
+      width: 32%; }
+    .go-japan__hotels-list-item--active {
+      width: 66%;
+      height: 520px; }
+    .go-japan__hotels-list-gutter-sizer {
+      width: 2%; } }
+  @media screen and (max-width: 1023px) {
+    .go-japan__hotels-list-grid-sizer, .go-japan__hotels-list-item {
+      width: 49%; }
+    .go-japan__hotels-list-item--active {
+      width: 100%; }
+    .go-japan__hotels-list-gutter-sizer {
+      width: 2%; } }
+  @media screen and (max-width: 567px) {
+    .go-japan__hotels-list-grid-sizer, .go-japan__hotels-list-item {
+      width: 100%; }
+    .go-japan__hotels-list-gutter-sizer {
+      width: 5%; } }
+
+.main-header {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(199, 0, 37, 0.7); }
+
+.filter {
+  position: relative;
+  min-height: 330px;
+  text-align: center; }
+  .filter__button.active {
+    -webkit-animation: filter-btn-active .3s ease-in-out both;
+            animation: filter-btn-active .3s ease-in-out both; }
+    .filter__button.active:hover > svg {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+    .filter__button.active svg {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+  .filter__button.inactive {
+    -webkit-animation: filter-btn-inactive .3s ease-in-out both;
+            animation: filter-btn-inactive .3s ease-in-out both; }
+    .filter__button.inactive svg {
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg); }
+  .filter__button {
+    z-index: 1;
+    position: relative;
+    max-height: 80px;
+    -webkit-transform: translateY(155px);
+        -ms-transform: translateY(155px);
+            transform: translateY(155px);
+    width: 50%;
+    padding-top: 15px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    background-color: rgba(199, 0, 37, 0.75);
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    -webkit-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out; }
+    .filter__button:hover {
+      background-color: rgba(199, 0, 37, 0.85); }
+    .filter__button:hover > svg {
+      -webkit-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+              transform: scale(1.2); }
+    .filter__button svg {
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      bottom: 10px;
+      left: 50%;
+      fill: #a4a9c7;
+      margin-left: -12.5px;
+      -webkit-transition: -webkit-transform .3s ease-in-out;
+      transition: -webkit-transform .3s ease-in-out;
+      transition: transform .3s ease-in-out;
+      transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out; }
+  .filter__layout.active {
+    -webkit-animation: filter-layout-active .3s ease-in-out both;
+            animation: filter-layout-active .3s ease-in-out both; }
+  .filter__layout.inactive {
+    -webkit-animation: filter-layout-inactive .3s ease-in-out both;
+            animation: filter-layout-inactive .3s ease-in-out both; }
+  .filter__layout {
+    position: relative;
+    overflow: hidden;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -76,136 +360,254 @@ table {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    margin-top: 500px;
-    padding-top: 30px; }
-    .go-japan__hotels-list-item {
-      -webkit-flex-basis: -webkit-calc(25% - 30px);
-          -ms-flex-preferred-size: calc(25% - 30px);
-              flex-basis: calc(25% - 30px);
-      height: 280px;
-      margin-left: 15px;
-      margin-right: 15px;
-      margin-bottom: 30px; }
+    -webkit-border-bottom-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+            border-bottom-right-radius: 5px; }
+    .filter__layout-apply-btn {
+      position: absolute;
+      padding: 15px 0;
+      width: 300px;
+      bottom: 15px;
+      left: 50%;
+      margin-left: -150px;
+      background-color: #a4a9c7;
+      cursor: pointer; }
+    .filter__layout-item {
+      padding-left: 15px;
+      padding-right: 15px;
+      width: 25%;
+      height: 250px;
+      background-color: rgba(51, 51, 51, 0.9); }
   @media screen and (max-width: 1599px) {
-    .go-japan__hotels-list-item {
-      -webkit-flex-basis: -webkit-calc(33.333% - 30px);
-          -ms-flex-preferred-size: calc(33.333% - 30px);
-              flex-basis: calc(33.333% - 30px); } }
-  @media screen and (max-width: 1023px) {
-    .go-japan__hotels-list-item {
-      -webkit-flex-basis: -webkit-calc(50% - 30px);
-          -ms-flex-preferred-size: calc(50% - 30px);
-              flex-basis: calc(50% - 30px); } }
+    .filter__layout-item {
+      width: 33.333%; } }
+  @media screen and (max-width: 1279px) {
+    .filter__layout-item {
+      width: 50%; } }
   @media screen and (max-width: 768px) {
-    .go-japan__hotels-list-item {
-      -webkit-flex-basis: 100%;
-          -ms-flex-preferred-size: 100%;
-              flex-basis: 100%; } }
+    .filter__layout-item {
+      width: 100%; } }
 
-.main-header {
-  width: 100%;
-  height: 40px;
-  background-color: rgba(199, 0, 37, 0.8); }
+.drag-slider {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .drag-slider__title {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #ababab; }
+  .drag-slider__value {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff; }
+  .drag-slider__scale {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    background-color: #a4a9c7;
+    width: 320px;
+    height: 10px; }
+    .drag-slider__scale-pointer.active {
+      background-color: #C70025; }
+      .drag-slider__scale-pointer.active .drag-slider__scale-pointer-icon--stars {
+        fill: #FAC917; }
+      .drag-slider__scale-pointer.active .drag-slider__scale-pointer-icon--rating {
+        fill: #f7f7f7; }
+      .drag-slider__scale-pointer.active .drag-slider__scale-pointer-icon--price {
+        fill: #f7f7f7; }
+      .drag-slider__scale-pointer.active .drag-slider__scale-pointer-icon--distance {
+        fill: #f7f7f7; }
+    .drag-slider__scale-pointer {
+      position: relative;
+      top: -12px;
+      width: 35px;
+      height: 35px;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      background-color: #610012;
+      -webkit-transition: background-color .3s ease-in-out;
+      transition: background-color .3s ease-in-out; }
+      .drag-slider__scale-pointer-icon {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -7.5px;
+        margin-left: -7.5px;
+        width: 15px;
+        height: 15px;
+        fill: #a4a9c7; }
+    .drag-slider__scale-mask {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      height: 10px;
+      width: 30px; }
+      .drag-slider__scale-mask-bg {
+        -webkit-border-radius: 5px;
+                border-radius: 5px;
+        background-color: #62ce6c;
+        width: 320px;
+        height: 10px; }
 
-.hotel-profile {
+.hotel {
   position: relative;
   overflow: hidden;
-  padding: 5px 10px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
   background-color: rgba(164, 169, 199, 0.7);
-  background-size: cover; }
-  .hotel-profile::before {
-    content: '';
+  cursor: pointer; }
+  .hotel--active:hover .hotel__preview {
+    -webkit-transform: scale(1.2) rotate(0.01deg);
+        -ms-transform: scale(1.2) rotate(0.01deg);
+            transform: scale(1.2) rotate(0.01deg); }
+  .hotel--active .hotel__name {
+    width: 100%; }
+  .hotel__preview {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: inherit;
-    background-color: rgba(51, 51, 51, 0.7);
-    -webkit-transform: translateY(-210px);
-        -ms-transform: translateY(-210px);
-            transform: translateY(-210px);
-    -webkit-transition: -webkit-transform .5s ease-out;
-    transition: -webkit-transform .5s ease-out;
-    transition: transform .5s ease-out;
-    transition: transform .5s ease-out, -webkit-transform .5s ease-out; }
-  .hotel-profile:hover::before {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0); }
-  .hotel-profile__no-preview {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: -webkit-transform 6s linear;
+    transition: -webkit-transform 6s linear;
+    transition: transform 6s linear;
+    transition: transform 6s linear, -webkit-transform 6s linear;
+    pointer-events: none; }
+  .hotel__no-preview {
     display: none;
     position: absolute;
-    top: 65%;
+    top: 55%;
     left: 50%;
-    -webkit-transform: translate(-50%, -65%);
-        -ms-transform: translate(-50%, -65%);
-            transform: translate(-50%, -65%);
-    text-align: center;
-    color: #333;
-    font-size: 16px;
-    font-weight: bold; }
-    .hotel-profile__no-preview svg {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 15px;
-      width: 80px;
-      height: 60px;
-      fill: rgba(51, 51, 51, 0.6); }
-  .hotel-profile__info {
-    position: relative; }
-    .hotel-profile__info-stars, .hotel-profile__info-name, .hotel-profile__info-distance, .hotel-profile__info-rating, .hotel-profile__info-choose {
-      position: absolute;
-      left: 0; }
-    .hotel-profile__info-stars svg {
+    width: 70px;
+    height: 70px;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    pointer-events: none;
+    fill: rgba(51, 51, 51, 0.6); }
+  .hotel__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(51, 51, 51, 0.7); }
+  .hotel__stars, .hotel__name, .hotel__distance, .hotel__rating, .hotel__choose {
+    position: absolute;
+    left: 15px; }
+  .hotel__stars {
+    top: 5px; }
+    .hotel__stars svg {
       width: 12px;
       height: 12px;
-      margin-right: 2px; }
-    .hotel-profile__info-name {
-      top: 20px;
-      max-width: 280px;
-      overflow: hidden;
-      font-weight: bold;
-      color: #f7f7f7;
-      font-size: 18px;
-      white-space: nowrap;
-      text-overflow: ellipsis; }
-    .hotel-profile__info-distance {
-      top: 44px;
-      color: #dedede;
-      font-size: 13px; }
-    .hotel-profile__info-rating {
-      left: 295px;
-      top: 5px;
-      width: 50px;
-      height: 50px;
-      border: 5px solid #a4a9c7;
-      color: #f7f7f7;
+      margin-right: 2px;
+      fill: #FAC917; }
+  .hotel__name {
+    top: 25px;
+    width: 260px;
+    overflow: hidden;
+    font-weight: bold;
+    color: #f7f7f7;
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.2; }
+  .hotel__distance {
+    top: 50px;
+    color: #dedede;
+    font-size: 13px; }
+  .hotel__rating {
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
+    border: 5px solid #a4a9c7;
+    color: #f7f7f7;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px; }
+    .hotel__rating svg {
+      height: 40px;
+      width: 26px;
+      fill: #d9d9d9; }
+    .hotel__rating--low {
+      border-color: #d44b4b; }
+    .hotel__rating--neutral {
+      border-color: #dc784e; }
+    .hotel__rating--high {
+      border-color: #62ce6c; }
+  .hotel__price {
+    background-color: rgba(51, 51, 51, 0.9);
+    padding: 15px 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    -webkit-border-top-left-radius: 5px;
+            border-top-left-radius: 5px; }
+    .hotel__price span {
+      display: inline-block;
+      margin-right: 10px;
       font-size: 20px;
       font-weight: bold;
-      text-align: center;
-      line-height: 40px; }
-      .hotel-profile__info-rating svg {
-        height: 40px;
-        width: 26px;
-        fill: #d9d9d9; }
-    .hotel-profile__info-rating--low {
-      border-color: #d44b4b; }
-    .hotel-profile__info-rating--neutral {
-      border-color: #dc784e; }
-    .hotel-profile__info-rating--high {
-      border-color: #62ce6c; }
+      color: #f7f7f7;
+      vertical-align: middle; }
+    .hotel__price svg {
+      width: 15px;
+      height: 15px;
+      vertical-align: middle;
+      fill: #f7f7f7; }
+
+.main-footer {
+  height: 200px;
+  width: 100%;
+  background-color: rgba(199, 0, 37, 0.7);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .main-footer__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    color: #f7f7f7; }
+  .main-footer__subtitle {
+    font-size: 18px;
+    color: #f7f7f7; }
 
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Helvetica; }
+  font-family: Helvetica;
+  overflow-y: scroll; }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
 template {
+  display: none; }
+
+.hidden {
   display: none; }

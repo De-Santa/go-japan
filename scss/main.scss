@@ -1,15 +1,20 @@
 @import 'reset';
 @import 'vars';
+@import 'animations/animations';
 @import 'container/container';
 
 @import 'go-japan/go-japan';
 @import 'header/header';
-@import 'hotel-profile/hotel-profile';
+@import 'filter/filter';
+@import 'drag-slider/drag-slider';
+@import 'hotel/hotel';
+@import 'footer/footer';
 
 //BOX-SIZING SETTINGS
 html {
 	box-sizing: border-box;
 	font-family: Helvetica;
+	overflow-y: scroll;
 }
 
 *, *:before, *:after {
@@ -18,5 +23,9 @@ html {
 
 //TEMPLATE IE FALLBACK
 template {
+	display: none;
+}
+
+.hidden {
 	display: none;
 }

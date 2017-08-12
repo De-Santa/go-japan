@@ -7,7 +7,7 @@
 		function spriteCache( window, document ){
 			'use strict';
 			var file = 'img/icons-sprite.html';
-			var revision = 6;
+			var revision = 10;
 			if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
 				return true;
 			var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
